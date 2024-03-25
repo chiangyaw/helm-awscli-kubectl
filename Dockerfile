@@ -16,8 +16,7 @@ RUN apk --update --no-cache add \
   tar \
   wget
 
-RUN pip3 install --upgrade pip
-RUN pip3 install awscliv${AWSCLI_VERSION}
+RUN python3 -m pip install awscliv${AWSCLI_VERSION}
 
 # Install kubectl
 RUN curl -L https://storage.googleapis.com/kubernetes-release/release/${KUBE_VERSION}/bin/linux/amd64/kubectl -o /usr/local/bin/kubectl && \
