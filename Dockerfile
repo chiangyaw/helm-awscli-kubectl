@@ -1,7 +1,7 @@
 FROM alpine:latest
 
 ENV KUBE_VERSION v1.29.3
-ENV HELM_VERSION v2.13.1
+ENV HELM_VERSION v3.14.3
 ENV AWSCLI_VERSION 2
 
 
@@ -13,10 +13,10 @@ RUN apk --update --no-cache add \
   git \
   openssh-client \
   python3 \
+  aws-cli \
   tar \
   wget
 
-RUN python3 -m pip install awscliv${AWSCLI_VERSION}
 
 # Install kubectl
 RUN curl -L https://storage.googleapis.com/kubernetes-release/release/${KUBE_VERSION}/bin/linux/amd64/kubectl -o /usr/local/bin/kubectl && \
