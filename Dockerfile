@@ -25,3 +25,5 @@ RUN curl -L https://storage.googleapis.com/kubernetes-release/release/${KUBE_VER
 # Install helm
 RUN wget -q https://get.helm.sh/helm-${HELM_VERSION}-linux-amd64.tar.gz -O - | tar -xzO linux-amd64/helm > /usr/local/bin/helm \
   && chmod +x /usr/local/bin/helm
+
+## New line here
